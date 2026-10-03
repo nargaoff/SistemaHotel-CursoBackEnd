@@ -14,8 +14,8 @@ namespace SistemaHotel.Produtos
     public partial class FrmEstoque : Form
     {
 
-   
-       
+
+
         string id;
 
         public FrmEstoque()
@@ -57,7 +57,7 @@ namespace SistemaHotel.Produtos
             txtProduto.Text = "";
             txtValor.Text = "";
             txtEstoque.Text = "";
-                       txtQuantidade.Text = "";
+            txtQuantidade.Text = "";
         }
 
 
@@ -105,9 +105,14 @@ namespace SistemaHotel.Produtos
 
 
             MessageBox.Show("Lançamento Feito com Sucesso!", "Dados Editados", MessageBoxButtons.OK, MessageBoxIcon.Information);
-           
+
             limparCampos();
             desabilitarCampos();
+        }
+
+        private void txtProduto_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
