@@ -29,129 +29,138 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCargo));
-            this.btnExcluir = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.btnSalvar = new System.Windows.Forms.Button();
-            this.btnNovo = new System.Windows.Forms.Button();
-            this.grid = new System.Windows.Forms.DataGridView();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
-            this.SuspendLayout();
+            btnExcluir = new System.Windows.Forms.Button();
+            btnEditar = new System.Windows.Forms.Button();
+            btnSalvar = new System.Windows.Forms.Button();
+            btnNovo = new System.Windows.Forms.Button();
+            grid = new System.Windows.Forms.DataGridView();
+            txtNome = new System.Windows.Forms.TextBox();
+            label2 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)grid).BeginInit();
+            SuspendLayout();
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExcluir.Enabled = false;
-            this.btnExcluir.FlatAppearance.BorderSize = 0;
-            this.btnExcluir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
-            this.btnExcluir.Location = new System.Drawing.Point(310, 302);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(70, 65);
-            this.btnExcluir.TabIndex = 76;
-            this.btnExcluir.UseVisualStyleBackColor = true;
-            this.btnExcluir.Click += new System.EventHandler(this.BtnExcluir_Click);
+            btnExcluir.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnExcluir.Enabled = false;
+            btnExcluir.FlatAppearance.BorderSize = 0;
+            btnExcluir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(240, 240, 240);
+            btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnExcluir.Image = (System.Drawing.Image)resources.GetObject("btnExcluir.Image");
+            btnExcluir.Location = new System.Drawing.Point(362, 348);
+            btnExcluir.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnExcluir.Name = "btnExcluir";
+            btnExcluir.Size = new System.Drawing.Size(82, 75);
+            btnExcluir.TabIndex = 76;
+            btnExcluir.UseVisualStyleBackColor = true;
+            btnExcluir.Click += BtnExcluir_Click;
             // 
             // btnEditar
             // 
-            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditar.Enabled = false;
-            this.btnEditar.FlatAppearance.BorderSize = 0;
-            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
-            this.btnEditar.Location = new System.Drawing.Point(310, 220);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(70, 65);
-            this.btnEditar.TabIndex = 75;
-            this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
+            btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnEditar.Enabled = false;
+            btnEditar.FlatAppearance.BorderSize = 0;
+            btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(240, 240, 240);
+            btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnEditar.Image = (System.Drawing.Image)resources.GetObject("btnEditar.Image");
+            btnEditar.Location = new System.Drawing.Point(362, 254);
+            btnEditar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new System.Drawing.Size(82, 75);
+            btnEditar.TabIndex = 75;
+            btnEditar.UseVisualStyleBackColor = true;
+            btnEditar.Click += BtnEditar_Click;
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalvar.Enabled = false;
-            this.btnSalvar.FlatAppearance.BorderSize = 0;
-            this.btnSalvar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
-            this.btnSalvar.Location = new System.Drawing.Point(310, 138);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(70, 65);
-            this.btnSalvar.TabIndex = 74;
-            this.btnSalvar.UseVisualStyleBackColor = true;
-            this.btnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
+            btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnSalvar.Enabled = false;
+            btnSalvar.FlatAppearance.BorderSize = 0;
+            btnSalvar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(240, 240, 240);
+            btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnSalvar.Image = (System.Drawing.Image)resources.GetObject("btnSalvar.Image");
+            btnSalvar.Location = new System.Drawing.Point(362, 159);
+            btnSalvar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnSalvar.Name = "btnSalvar";
+            btnSalvar.Size = new System.Drawing.Size(82, 75);
+            btnSalvar.TabIndex = 74;
+            btnSalvar.UseVisualStyleBackColor = true;
+            btnSalvar.Click += BtnSalvar_Click;
             // 
             // btnNovo
             // 
-            this.btnNovo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNovo.FlatAppearance.BorderSize = 0;
-            this.btnNovo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNovo.Image = ((System.Drawing.Image)(resources.GetObject("btnNovo.Image")));
-            this.btnNovo.Location = new System.Drawing.Point(310, 67);
-            this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(70, 65);
-            this.btnNovo.TabIndex = 73;
-            this.btnNovo.UseVisualStyleBackColor = true;
-            this.btnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
+            btnNovo.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnNovo.FlatAppearance.BorderSize = 0;
+            btnNovo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(240, 240, 240);
+            btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnNovo.Image = (System.Drawing.Image)resources.GetObject("btnNovo.Image");
+            btnNovo.Location = new System.Drawing.Point(362, 77);
+            btnNovo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnNovo.Name = "btnNovo";
+            btnNovo.Size = new System.Drawing.Size(82, 75);
+            btnNovo.TabIndex = 73;
+            btnNovo.UseVisualStyleBackColor = true;
+            btnNovo.Click += BtnNovo_Click;
             // 
             // grid
             // 
-            this.grid.AllowUserToAddRows = false;
-            this.grid.AllowUserToDeleteRows = false;
-            this.grid.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grid.GridColor = System.Drawing.SystemColors.Control;
-            this.grid.Location = new System.Drawing.Point(25, 67);
-            this.grid.Name = "grid";
-            this.grid.ReadOnly = true;
-            this.grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grid.Size = new System.Drawing.Size(264, 300);
-            this.grid.TabIndex = 72;
-            this.grid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellClick);
+            grid.AllowUserToAddRows = false;
+            grid.AllowUserToDeleteRows = false;
+            grid.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            grid.GridColor = System.Drawing.SystemColors.Control;
+            grid.Location = new System.Drawing.Point(29, 77);
+            grid.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            grid.Name = "grid";
+            grid.ReadOnly = true;
+            grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            grid.Size = new System.Drawing.Size(308, 346);
+            grid.TabIndex = 72;
+            grid.CellClick += Grid_CellClick;
             // 
             // txtNome
             // 
-            this.txtNome.Enabled = false;
-            this.txtNome.Location = new System.Drawing.Point(66, 23);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(115, 20);
-            this.txtNome.TabIndex = 69;
+            txtNome.Enabled = false;
+            txtNome.Location = new System.Drawing.Point(77, 27);
+            txtNome.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtNome.Name = "txtNome";
+            txtNome.Size = new System.Drawing.Size(134, 23);
+            txtNome.TabIndex = 69;
+            txtNome.TextChanged += txtNome_TextChanged;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 26);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
-            this.label2.TabIndex = 71;
-            this.label2.Text = "Cargo:";
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(26, 30);
+            label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(42, 15);
+            label2.TabIndex = 71;
+            label2.Text = "Cargo:";
             // 
             // FrmCargo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(406, 402);
-            this.Controls.Add(this.btnExcluir);
-            this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.btnNovo);
-            this.Controls.Add(this.grid);
-            this.Controls.Add(this.txtNome);
-            this.Controls.Add(this.label2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.Name = "FrmCargo";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastro de Cargos";
-            this.Load += new System.EventHandler(this.FrmCargo_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.SystemColors.InactiveCaption;
+            ClientSize = new System.Drawing.Size(474, 464);
+            Controls.Add(btnExcluir);
+            Controls.Add(btnEditar);
+            Controls.Add(btnSalvar);
+            Controls.Add(btnNovo);
+            Controls.Add(grid);
+            Controls.Add(txtNome);
+            Controls.Add(label2);
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            MaximizeBox = false;
+            Name = "FrmCargo";
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            Text = "Cadastro de Cargos";
+            Load += FrmCargo_Load;
+            ((System.ComponentModel.ISupportInitialize)grid).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace SistemaHotel.Cadastros
 {
@@ -15,8 +16,9 @@ namespace SistemaHotel.Cadastros
     {
 
 
-
+        string arquivo = "cargos.txt";
         string id;
+
 
         public FrmCargo()
         {
@@ -31,7 +33,7 @@ namespace SistemaHotel.Cadastros
 
         private void Listar()
         {
-            
+
 
 
             FormatarDG();
@@ -39,6 +41,7 @@ namespace SistemaHotel.Cadastros
 
         private void BtnNovo_Click(object sender, EventArgs e)
         {
+            
             txtNome.Enabled = true;
             btnSalvar.Enabled = true;
             btnNovo.Enabled = false;
@@ -73,7 +76,7 @@ namespace SistemaHotel.Cadastros
             Listar();
         }
 
-       
+
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
@@ -87,7 +90,7 @@ namespace SistemaHotel.Cadastros
 
 
             //CÓDIGO DO BOTÃO PARA EDITAR
-            
+
 
 
             MessageBox.Show("Registro Editado com Sucesso!", "Dados Editados", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -105,7 +108,7 @@ namespace SistemaHotel.Cadastros
             if (resultado == DialogResult.Yes)
             {
                 //CÓDIGO DO BOTÃO PARA EXCLUIR
- 
+
 
                 MessageBox.Show("Registro Excluido com Sucesso!", "Registro Excluido", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 btnNovo.Enabled = true;
@@ -117,7 +120,7 @@ namespace SistemaHotel.Cadastros
             }
         }
 
-        
+
 
         private void Grid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -128,6 +131,11 @@ namespace SistemaHotel.Cadastros
 
             id = grid.CurrentRow.Cells[0].Value.ToString();
             txtNome.Text = grid.CurrentRow.Cells[1].Value.ToString();
+
+        }
+
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

@@ -8,12 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Data.SqlClient;
+
 
 namespace SistemaHotel.Cadastros
 {
     public partial class FrmFuncionarios : Form
     {
-
+        string conexao = @"Server=ECFP507D1319374\SQLEXPRESS02;Database=SistemaHotel;Trusted_Connection=True;TrustServerCertificate=True";
 
         string id;
 
@@ -129,6 +131,13 @@ namespace SistemaHotel.Cadastros
                 Close();
             }
 
+            txtNome.Clear();
+            txtCPF.Clear();
+            txtEndereco.Clear();
+            txtTelefone.Clear();
+            cbCargo.SelectedIndex = -1;
+            txtNome.Focus();
+
             habilitarCampos();
             btnSalvar.Enabled = true;
             btnNovo.Enabled = false;
@@ -155,7 +164,21 @@ namespace SistemaHotel.Cadastros
 
 
             //CÓDIGO DO BOTÃO PARA SALVAR
-
+            string caminho = @"Server=ECFP507D1319374\SQLEXPRESS02;Database=SistemaHotel;Trusted_Connection=True;TrustServerCertificate=True";
+            using (var conexao = new SqlConnection(caminho))
+            {
+                conexao.Open();
+                string query = "INSERT INTO Funcionarios (Nome, CPF, Endereco, Telefone, Cargo) VALUES (@Nome, @CPF, @Endereco, @Telefone, @Cargo)";
+                using (var comando = new SqlCommand(query, conexao))
+                {
+                    comando.Parameters.AddWithValue("@Nome", txtNome.Text);
+                    comando.Parameters.AddWithValue("@CPF", txtCPF.Text);
+                    comando.Parameters.AddWithValue("@Endereco", txtEndereco.Text);
+                    comando.Parameters.AddWithValue("@Telefone", txtTelefone.Text);
+                    comando.Parameters.AddWithValue("@Cargo", cbCargo.SelectedItem.ToString());
+                    comando.ExecuteNonQuery();
+                }
+            }
 
 
             //VERIFICAR SE O CPF JÁ EXISTE NO BANCO
